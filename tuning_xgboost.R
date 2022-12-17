@@ -1,5 +1,5 @@
 # prepare data
-data<-as.matrix(read.csv("~/Downloads/tongue_cancer.csv"))
+data<-as.matrix(read.csv("~/Downloads/tongue.csv"))[,-1]
 data[,7]<-ifelse(grepl("4",data[,7]),4,data[,7])
 data<-data[,-c(1,5,6,8)]
 data[,1]<-ifelse(data[,1]=="M",0,1)
